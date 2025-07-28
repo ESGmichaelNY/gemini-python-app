@@ -1,0 +1,23 @@
+# File: pyproject.toml
+
+[tool.poetry]
+name = "gemini-python-app"
+version = "0.1.0"
+description = "A simple Python Flask app for Google Cloud Run, managed by Poetry."
+# Authors should be a list of strings in the format "Michael Willis <michaeljwillis@gmail.com>"
+authors = ["ESGmichaelNY <132467323+ESGmichaelNY@users.noreply.github.com>"]
+readme = "README.md"
+# 'requires-python' is not used directly under [tool.poetry].
+# The Python version constraint is handled by 'python' under [tool.poetry.dependencies].
+packages = [{include = "gemini_python_app", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12" # IMPORTANT: This must match your Dockerfile base image (e.g., FROM python:3.12-slim-buster)
+flask = ">=3.1.1,<4.0.0"
+gunicorn = ">=23.0.0,<24.0.0"
+google-cloud-storage = ">=3.2.0,<4.0.0"
+google-cloud-firestore = ">=2.21.0,<3.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

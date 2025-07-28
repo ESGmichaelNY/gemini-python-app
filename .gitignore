@@ -1,0 +1,44 @@
+i-python-app/).
+
+# File: .gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+.env.*
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ipynb_checkpoints
+.eggs/
+*.egg-info/
+dist/
+build/
+
+# Poetry
+.venv/ # Poetry's default virtual environment location (if not in-project)
+.poetry/ # Poetry's internal cache/config (if virtualenvs.in-project is true)
+poetry-*.lock # If you have multiple lock files, otherwise poetry.lock should be committed
+
+# Google Cloud
+.gcloud/
+.gcloudignore # Cloud Build specific ignore file, usually generated
+*.log # Cloud Logging output (if written locally)
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/ # IntelliJ / PyCharm
+.vscode/ # VS Code (optional, if you want to ignore workspace settings)
+
+# Other
+*.sqlite3 # Example for SQLite databases
